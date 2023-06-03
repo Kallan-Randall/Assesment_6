@@ -18,17 +18,13 @@ describe("Duel Duo tests", () => {
 
   test("Clicking the Draw button displays the div with id = 'choices'", async () => {
     await driver.get("http://localhost:8000");
-    // Simulate clicking the Draw button
     await driver.findElement(By.id("draw-button")).click();
-    // Assert that the div with id 'choices' is displayed
     await driver.wait(until.elementLocated(By.id("choices")), 1000);
   });
 
   test("Clicking an 'Add to Duo' button displays the div with id = 'player-duo'", async () => {
     await driver.get("http://localhost:8000");
-    // Simulate clicking an 'Add to Duo' button
     await driver.findElement(By.id("add-to-duo-button")).click();
-    // Assert that the div with id 'player-duo' is displayed
     await driver.wait(until.elementLocated(By.id("player-duo")), 1000);
   });
 
